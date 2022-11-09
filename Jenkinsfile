@@ -1,10 +1,10 @@
-node{
-    stage('init'){
-      //init sample
+stage('compile')
+  agent {
+    docker {
+        image 'maven:3.6.0-jdk-8-alpine'
+        args '-v /home.m2/repository:/root/.m2/repository'
     }
-    stage('build'){
-        withMaven(maven: 'mvn') {
-            mvn clean package
-        }
     }
-}
+    steps{
+      sh 'mvn compile' 
+    }
