@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('bluid') {
       steps {
-        sh 'docker run hello-world'
+        sh 'npm install'
       }
     }
 
