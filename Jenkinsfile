@@ -21,6 +21,12 @@ pipeline {
       }
     }
 
+    stage('run docker image') {
+      steps {
+        sh 'docker push wissem007/nodejs:$BUILD_NUMBER'
+      }
+    }
+
   }
   environment {
     DOCKERHUB_CREDENTIALS = 'credentials(\'docker-hub-wissem\')'
