@@ -23,6 +23,6 @@ pipeline {
 
   }
   environment {
-    DOCKERHUB_CREDENTIALS = 'docker-hub-wissem'
+    DOCKERHUB_CREDENTIALS = 'credentials(\'docker-hub-wissem\')'
   }
 }
