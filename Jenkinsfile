@@ -15,13 +15,13 @@ pipeline {
       }
     }
 
-    stage('login to dockerhub') {
+    stage('Login to dockerhub') {
       steps {
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
       }
     }
 
-    stage('run docker image') {
+    stage('Run docker image') {
       steps {
         sh 'docker push wissem007/nodejs:$BUILD_NUMBER'
       }
