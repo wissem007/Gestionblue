@@ -11,6 +11,7 @@ pipeline {
     stage('Build docker imag') {
       steps {
         sh 'docker build -t wissem007/nodeapp:$BUILD_NUMBER .'
+        echo 'Docker run avec Succes '
       }
     }
 
