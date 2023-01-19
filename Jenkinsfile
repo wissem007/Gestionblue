@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Git check out') {
       steps {
-        sh 'docker run hello-world'
+        sh ' git \'https://github.com/wissem007/nodejs-demo.git\''
       }
     }
 
