@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Git check out') {
+    stage('Git check Out') {
       steps {
-        sh ' git \'https://github.com/wissem007/nodejs-demo.git\''
+        git(url: 'https://github.com/wissem007/nodejs-demo.git', branch: 'matser')
       }
     }
 
