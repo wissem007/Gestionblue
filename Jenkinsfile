@@ -13,12 +13,6 @@ pipeline {
       }
     }
 
-    stage('sonar') {
-      steps {
-        withSonarQubeEnv 'SonarQube'
-      }
-    }
-
   }
   tools {
     maven 'Maven'
