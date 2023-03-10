@@ -13,8 +13,11 @@ pipeline {
       }
     }
 
-  }
-  environment {
-    maven = 'Maven'
+    stage('') {
+      steps {
+        tool(name: 'maven', type: 'Maven')
+      }
+    }
+
   }
 }
