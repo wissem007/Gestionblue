@@ -1,9 +1,5 @@
 pipeline {
   agent any
-  
-  tools {
-        maven "Maven"
-    }
   stages {
     stage('Clone code from Git') {
       steps {
@@ -17,11 +13,8 @@ pipeline {
       }
     }
 
-    stage('') {
-      steps {
-        tool(name: 'maven', type: 'Maven')
-      }
-    }
-
+  }
+  tools {
+    maven 'Maven'
   }
 }
